@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Lato', sans-serif;
+    font: oblique bold 120% cursive;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
@@ -15,10 +15,19 @@ body{
 
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(248, 130, 130, 0.5)), url('../img/portada.jpg');
+    background-image: url('../img/portada.jpg');
     background-size: cover;
     background-position: top;
     position: relative;
+}
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
 }
 
 
@@ -36,30 +45,65 @@ body{
 
 
 
-.caja-texto{
+.header-caja-titulo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    width: 352px;
 }
 .header-titulo{
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
     animation-name: moverIzq;
     animation-duration: 2s;
 }
-.header-titulo-principal{
+.header-titulo__principal{
     display: block;
     font-size: 60px;
     font-weight: 700;
+    
 }
-.header-titulo-secunadario{
+.header-titulo__secunadario{
     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 4.5px;
+    letter-spacing: 3px;
 }
+
+.header-registro{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.fecha{
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    margin-right: 20px;
+    padding: 15px 45px;
+    width: 137px;
+    outline: none;
+    color: white;
+    transition: 250ms width ease, 250ms border-color ease;
+    cursor: pointer;
+}
+.fecha:hover{
+    width: 190px;
+}
+.fecha:focus{
+    width: 230px;
+    border-color: rgb(184, 1, 184);
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+
+
+
 
 
 @keyframes moverIzq {
