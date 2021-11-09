@@ -10,7 +10,7 @@ body{
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 15px;
+    padding: 10px;
 }
 
 .header{
@@ -80,12 +80,13 @@ body{
 
 
 .fecha{
+    font-size: 20px;
     border: none;
     border-bottom: 1px solid white;
     background: none;
     margin-right: 20px;
     padding: 15px 45px;
-    width: 137px;
+    width: 159px;
     outline: none;
     color: white;
     transition: 250ms width ease, 250ms border-color ease;
@@ -96,12 +97,27 @@ body{
 }
 .fecha:focus{
     width: 230px;
-    border-color: rgb(184, 1, 184);
+    border-color: #b801b8;
 }
-input[type="date"]::-webkit-calendar-picker-indicator{
+input[type="text"]::-webkit-calendar-picker-indicator{
     filter: invert(1);
 }
 
+
+.boton{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background-color: #9b339b;
+    border: 3px solid #550055;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.boton:hover{
+    color: #550055;
+    background-color: #af7faf;
+}
 
 
 
