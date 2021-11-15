@@ -32,25 +32,47 @@ body{
 
 
 
-.logo-box{
-    position: absolute;
-    top: 20px;
-    left: 30px;
-    animation-name: moverIzq;
-    animation-duration: 2s;
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 }
 .logo{
     height: 55px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #111;
 }
 
 
 
+
+/*Titulos principales*/
 .header-caja-titulo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 352px;
+    width: 380px;
 }
 .header-titulo{
     color: #fff;
@@ -68,43 +90,58 @@ body{
     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
-.header-registro{
+
+
+
+/*Fechas de registro y boton*/
+.header-registro__date{
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 600px;
+    text-align: center;
 }
 
-
 .fecha{
+    display: inline-block;
     font-size: 20px;
     border: none;
     border-bottom: 1px solid white;
     background: none;
     margin-right: 20px;
-    padding: 15px 45px;
-    width: 159px;
+    padding: 5px;
+    width: 190px;
     outline: none;
     color: white;
-    transition: 250ms width ease, 250ms border-color ease;
+    transition: 250ms width ease, 250ms border-color ease; //cambios que no sean bruscos, suavizar cambio de tamaño
     cursor: pointer;
+    animation-name: moverIzq;
+    animation-duration: 2s;
 }
 .fecha:hover{
-    width: 190px;
+    width: 210px;
 }
 .fecha:focus{
     width: 230px;
     border-color: #b801b8;
 }
-input[type="text"]::-webkit-calendar-picker-indicator{
+input[type="date"]::-webkit-calendar-picker-indicator{
     filter: invert(1);
 }
 
-
+/*Boton de registro*/
+.header-registro__boton{
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
 .boton{
+    display: inline-block;
     width: 100px;
     height: 50px;
     font-size: 20px;
@@ -113,7 +150,10 @@ input[type="text"]::-webkit-calendar-picker-indicator{
     border: 3px solid #550055;
     border-radius: 15px;
     cursor: pointer;
+    animation-name: moverIzq;
+    animation-duration: 2s;
 }
+
 .boton:hover{
     color: #550055;
     background-color: #af7faf;
