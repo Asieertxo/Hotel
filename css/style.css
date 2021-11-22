@@ -29,9 +29,13 @@ body {
 .navegacion {
   margin: 0;
   padding: 0;
+  background-color: rgba(184, 1, 184, 0.5);
   z-index: 2000;
   width: 100%;
-  height: 60px; }
+  height: 120px; }
+
+.navegacion:hover {
+  background-color: rgba(184, 1, 184, 0.8); }
 
 .navegacion-logo {
   height: 70px;
@@ -46,6 +50,10 @@ body {
   font-weight: bold;
   margin-left: 40px;
   margin-top: 40px; }
+
+.navegacion-menu:hover {
+  background-color: rgba(184, 1, 184, 0.8);
+  cursor: pointer; }
 
 .navegacion-menu a {
   color: #fff;
@@ -62,7 +70,7 @@ body {
 .header-titulo {
   color: #fff;
   text-transform: capitalize;
-  animation-name: moverIzq;
+  animation-name: moverAbajo;
   animation-duration: 2s; }
 
 .header-titulo__principal {
@@ -98,7 +106,7 @@ body {
   color: white;
   transition: 250ms width ease, 250ms border-color ease;
   cursor: pointer;
-  animation-name: moverIzq;
+  animation-name: moverAbajo;
   animation-duration: 2s; }
 
 .fecha:hover {
@@ -124,18 +132,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 50px;
   font-size: 20px;
   color: white;
-  background-color: #9b339b;
-  border: 3px solid #550055;
+  background-color: transparent;
+  border: 3px solid #b801b8;
   border-radius: 15px;
   cursor: pointer;
-  animation-name: moverIzq;
+  animation-name: moverAbajo;
   animation-duration: 2s; }
 
 .boton:hover {
-  color: #550055;
-  background-color: #af7faf; }
+  color: #b801b8;
+  border: 3px solid #fff; }
 
-@keyframes moverIzq {
+@keyframes moverAbajo {
   0% {
     opacity: 0;
     transform: translateY(-500px); }
