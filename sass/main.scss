@@ -60,6 +60,7 @@ body{
     height: auto;
     margin-left: 40px;
     margin-top: 40px;
+    list-style: none;
     //border: 1px solid black;
 
 }
@@ -79,6 +80,24 @@ body{
     background-size: 100% 2px;
     color: rgb(184, 1, 184);
 }
+
+.navegacion-menu__desplegable{
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    width: 80%;
+    height: 120px;
+    transform: scale(0);
+    transition: all ease 1s;
+    background-color: chartreuse;
+}
+.habitacion:hover ~ .navegacion-menu__desplegable{
+    transform: scale(1);
+}
+.habitacion{
+    background-color: chocolate;
+}
+
 
 
 
