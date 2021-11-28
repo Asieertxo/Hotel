@@ -1,5 +1,5 @@
 .boton{
-    display: inline-block;
+    //display: inline-block;
     width: 100px;
     height: 50px;
     font-size: 20px;
@@ -10,10 +10,16 @@
     cursor: pointer;
     animation-name: moverAbajo;
     animation-duration: 2s;
+    transition: all 0.2s;
 
     &:hover{
         color: $color-rosa;
-        //background-color: #af7faf;
         border: 3px solid $color-blanco;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px $color-rosaA;
+    }
+    &:active{
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px $color-rosa;
     }
 }

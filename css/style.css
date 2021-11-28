@@ -39,7 +39,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 580px;
     text-align: center; }
   .header-titulo {
     color: #fff;
@@ -57,10 +56,9 @@ body {
       letter-spacing: 4px; }
     .header-titulo:hover {
       transform: scale(1.1);
-      transition-duration: 1s; }
+      transition: all 0.5s; }
 
 .boton {
-  display: inline-block;
   width: 100px;
   height: 50px;
   font-size: 20px;
@@ -70,10 +68,16 @@ body {
   border-radius: 15px;
   cursor: pointer;
   animation-name: moverAbajo;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+  transition: all 0.2s; }
   .boton:hover {
     color: #b801b8;
-    border: 3px solid #fff; }
+    border: 3px solid #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px #b801b880; }
+  .boton:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px #b801b8; }
 
 .flechas {
   width: 50px;
