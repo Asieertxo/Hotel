@@ -1,0 +1,42 @@
+.navegacion {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    animation-name: moverAbajo;
+    animation-duration: 2s;
+
+    &-logo{
+        height: 70px;
+        margin-top: 40px;
+        margin-left: 60px;
+        margin-right: 50px;
+        float: left;
+    }
+    &-menu{
+        float: left;
+        font-size: 25px;
+        font-weight: bold;
+        width: auto;
+        height: auto;
+        margin-left: 40px;
+        margin-top: 40px;
+        list-style: none;
+    
+    }
+    &-menu:hover{
+        cursor: pointer;
+    }
+    &-menu a{
+        color: $color-blanco;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 1s;
+    }
+    &-menu a:hover{
+        background-size: 100% 2px;
+        color: $color-rosa;
+    }
+}

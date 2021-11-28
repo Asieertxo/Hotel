@@ -1,3 +1,14 @@
+@keyframes moverAbajo {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px); }
+  90% {
+    opacity: 0.9;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -7,43 +18,7 @@ body {
   font: oblique bold 120% cursive;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.7;
-  color: #777; }
-
-.navegacion {
-  position: absolute;
-  width: 100%;
-  height: 120px;
-  animation-name: moverAbajo;
-  animation-duration: 2s; }
-  .navegacion-logo {
-    height: 70px;
-    margin-top: 40px;
-    margin-left: 60px;
-    margin-right: 50px;
-    float: left; }
-  .navegacion-menu {
-    float: left;
-    font-size: 25px;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    margin-left: 40px;
-    margin-top: 40px;
-    list-style: none; }
-  .navegacion-menu:hover {
-    cursor: pointer; }
-  .navegacion-menu a {
-    color: #fff;
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size 1s; }
-  .navegacion-menu a:hover {
-    background-size: 100% 2px;
-    color: #b801b8; }
+  line-height: 1.7; }
 
 .header {
   height: 95vh;
@@ -84,44 +59,12 @@ body {
       transform: scale(1.1);
       transition-duration: 1s; }
 
-/*Fechas de registro y boton*/
-.header-registro {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  text-align: center; }
-  .header-registro__date {
-    display: inline-block;
-    font-size: 20px;
-    border: none;
-    border-bottom: 1px solid white;
-    background: none;
-    margin-right: 20px;
-    padding: 5px;
-    width: 190px;
-    outline: none;
-    color: white;
-    transition: 250ms width ease, 250ms border-color ease;
-    cursor: pointer;
-    animation-name: moverAbajo;
-    animation-duration: 2s; }
-    .header-registro__date:hover {
-      width: 210px; }
-    .header-registro__date:focus {
-      width: 230px;
-      border-color: #b801b8; }
-  .header-registro input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1); }
-
-/*Boton de registro*/
 .boton {
   display: inline-block;
   width: 100px;
   height: 50px;
   font-size: 20px;
-  color: white;
+  color: #fff;
   background-color: transparent;
   border: 3px solid #b801b8;
   border-radius: 15px;
@@ -139,18 +82,67 @@ body {
   top: 90%;
   left: 50%; }
 
-.oscurecer {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); }
+.header-registro {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  text-align: center; }
+  .header-registro__date {
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    margin-right: 20px;
+    padding: 5px;
+    width: 190px;
+    outline: none;
+    color: #fff;
+    transition: 250ms width ease, 250ms border-color ease;
+    cursor: pointer;
+    animation-name: moverAbajo;
+    animation-duration: 2s; }
+    .header-registro__date:hover {
+      width: 210px; }
+    .header-registro__date:focus {
+      width: 230px;
+      border-color: #b801b8; }
+  .header-registro input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); }
 
-@keyframes moverAbajo {
-  0% {
-    opacity: 0;
-    transform: translateY(-500px); }
-  90% {
-    opacity: 0.9;
-    transform: translateY(20px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
+.navegacion {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  animation-name: moverAbajo;
+  animation-duration: 2s; }
+  .navegacion-logo {
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 50px;
+    float: left; }
+  .navegacion-menu {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 40px;
+    list-style: none; }
+  .navegacion-menu:hover {
+    cursor: pointer; }
+  .navegacion-menu a {
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 1s; }
+  .navegacion-menu a:hover {
+    background-size: 100% 2px;
+    color: #b801b8; }
