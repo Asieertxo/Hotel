@@ -1,3 +1,17 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/home";
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -13,26 +27,6 @@ body{
     //padding: 10px;
 }
 
-.header{
-    height: 95vh;
-    background-image: url('../img/portada.jpg');
-    background-size: cover;
-    background-position: top;
-    position: relative;
-}
-.header:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.4);
-}
-
-
-
-
 .navegacion {
     position: absolute;
     //background-color: rgba(184, 1, 184, 0.5);
@@ -41,141 +35,149 @@ body{
     height: 120px;
     animation-name: moverAbajo;
     animation-duration: 2s;
-}
-.navegacion:hover{
-    //oscurecer pagina
-}
-.navegacion-logo{
-    height: 70px;
-    margin-top: 40px;
-    margin-left: 60px;
-    margin-right: 50px;
-    float: left;
-}
-.navegacion-menu{
-    float: left;
-    font-size: 25px;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    margin-left: 40px;
-    margin-top: 40px;
-    list-style: none;
-    //border: 1px solid black;
 
-}
-.navegacion-menu:hover{
-    cursor: pointer;
-}
-.navegacion-menu a{
-    color: #fff;
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size 1s;
-}
-.navegacion-menu a:hover{
-    background-size: 100% 2px;
-    color: rgb(184, 1, 184);
-}
-
-.navegacion-menu__desplegable{
-    position: absolute;
-    top: 12%;
-    left: 11%;
-    width: 80%;
-    height: 120px;
-    transform: scale(0);
-    transition: all ease 1s;
-    background-color: chartreuse;
-}
-.habitacion:hover ~ .navegacion-menu__desplegable{
-    transform: scale(1);
-}
-.habitacion{
-    background-color: chocolate;
+    &:hover{
+        //oscurecer pagina
+    }
+    &-logo{
+        height: 70px;
+        margin-top: 40px;
+        margin-left: 60px;
+        margin-right: 50px;
+        float: left;
+    }
+    &-menu{
+        float: left;
+        font-size: 25px;
+        font-weight: bold;
+        width: auto;
+        height: auto;
+        margin-left: 40px;
+        margin-top: 40px;
+        list-style: none;
+        //border: 1px solid black;
+    
+    }
+    &-menu:hover{
+        cursor: pointer;
+    }
+    &-menu a{
+        color: #fff;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 1s;
+    }
+    &-menu a:hover{
+        background-size: 100% 2px;
+        color: #b801b8;
+    }
 }
 
 
 
+.header{
+    height: 95vh;
+    background-image: url('../img/portada.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+    }
 
 
-/*Titulos principales*/
-.header-caja-titulo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 380px;
-}
-.header-titulo{
-    color: #fff;
-    text-transform: capitalize;
-    animation-name: moverAbajo;
-    animation-duration: 2s;
-}
-.header-titulo__principal{
-    display: block;
-    font-size: 60px;
-    font-weight: 700;
+    &-titulocaja{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 580px;
+        text-align: center;
+    }
+    &-titulo{
+        color: #fff;
+        text-transform: capitalize;
+        animation-name: moverAbajo;
+        animation-duration: 2s;
+
+        &__principal{
+            display: block;
+            font-size: 60px;
+            font-weight: 700;
+        
+        }
+        &__secunadario{
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 4px;
+        }
+        &:hover{
+            transform: scale(1.1);
+            transition-duration: 1s;
+        }
+    }
     
 }
-.header-titulo__secunadario{
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 4px;
-}
+
+
 
 
 
 
 /*Fechas de registro y boton*/
-.header-registro__date{
+.header-registro{
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
     text-align: center;
+
+    &__date{
+        display: inline-block;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid white;
+        background: none;
+        margin-right: 20px;
+        padding: 5px;
+        width: 190px;
+        outline: none;
+        color: white;
+        transition: 250ms width ease, 250ms border-color ease; //cambios que no sean bruscos, suavizar cambio de tamaño
+        cursor: pointer;
+        animation-name: moverAbajo;
+        animation-duration: 2s;
+
+        &:hover{
+            width: 210px;
+        }
+        &:focus{
+            width: 230px;
+            border-color: #b801b8;
+        }
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator{
+        filter: invert(1);
+    } 
 }
 
-.fecha{
-    display: inline-block;
-    font-size: 20px;
-    border: none;
-    border-bottom: 1px solid white;
-    background: none;
-    margin-right: 20px;
-    padding: 5px;
-    width: 190px;
-    outline: none;
-    color: white;
-    transition: 250ms width ease, 250ms border-color ease; //cambios que no sean bruscos, suavizar cambio de tamaño
-    cursor: pointer;
-    animation-name: moverAbajo;
-    animation-duration: 2s;
-}
-.fecha:hover{
-    width: 210px;
-}
-.fecha:focus{
-    width: 230px;
-    border-color: #b801b8;
-}
-input[type="date"]::-webkit-calendar-picker-indicator{
-    filter: invert(1);
-}
+
+
 
 /*Boton de registro*/
-.header-registro__boton{
-    position: absolute;
-    top: 75%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-}
+
 .boton{
     display: inline-block;
     width: 100px;
@@ -188,19 +190,29 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     cursor: pointer;
     animation-name: moverAbajo;
     animation-duration: 2s;
+
+    &:hover{
+        color: #b801b8;
+        //background-color: #af7faf;
+        border: 3px solid #fff;
+}
 }
 
-.boton:hover{
-    color: #b801b8;
-    //background-color: #af7faf;
-    border: 3px solid #fff;
-}
-.header-flechas{
+
+.flechas{
     width: 50px;
     height: 50px;
     position: absolute;
     top: 90%;
     left: 50%;
+}
+
+
+
+.oscurecer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
