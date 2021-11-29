@@ -153,8 +153,9 @@ body {
     color: #b801b8; }
 
 .oscurecer {
-  width: 0%;
-  height: 0%; }
+  width: 100%;
+  height: 889px;
+  transition: all 0.5s; }
 
 .navegacion:hover ~ .oscurecer {
   width: 100%;
