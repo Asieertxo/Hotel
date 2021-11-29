@@ -1,10 +1,10 @@
 @keyframes moverAbajo {
   0% {
     opacity: 0;
-    transform: translateY(-500px); }
+    transform: translateY(-50rem); }
   90% {
     opacity: 0.9;
-    transform: translateY(20px); }
+    transform: translateY(2rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -16,8 +16,8 @@
 
 body {
   font: oblique bold 120% cursive;
+  font-size: 10px;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7; }
 
 .header {
@@ -33,14 +33,15 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: #00000066; }
   .header-titulocaja {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    text-align: center; }
+    width: 40.8rem;
+    text-align: center;
+    background-color: chartreuse; }
   .header-titulo {
     color: #fff;
     text-transform: capitalize;
