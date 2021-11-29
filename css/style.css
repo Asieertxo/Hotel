@@ -154,20 +154,20 @@ body {
 
 .oscurecer {
   width: 100%;
-  height: 889px;
+  height: 95vh;
   transition: all 0.5s; }
 
 .navegacion:hover ~ .oscurecer {
   width: 100%;
-  height: 889px;
+  height: 95vh;
   background-color: rgba(0, 0, 0, 0.3); }
 
 .header-titulocaja:hover ~ .oscurecer {
   width: 100%;
-  height: 889px;
+  height: 95vh;
   background-color: rgba(0, 0, 0, 0.3); }
 
 .header-registro:hover ~ .oscurecer {
   width: 100%;
-  height: 889px;
+  height: 95vh;
   background-color: rgba(0, 0, 0, 0.3); }
