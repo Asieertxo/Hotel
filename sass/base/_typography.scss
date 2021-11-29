@@ -29,6 +29,7 @@
         text-transform: capitalize;
         animation-name: moverAbajo;
         animation-duration: 2s;
+        transition: transform 0.5s;
 
         &__principal{
             display: block;
@@ -44,7 +45,6 @@
         }
         &:hover{
             transform: scale(1.1);
-            transition: all 0.5s;
         }
     }
     
