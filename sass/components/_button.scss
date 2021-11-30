@@ -1,12 +1,12 @@
 .boton{
     //display: inline-block;
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
     color: $color-blanco;
     background-color: transparent;
-    border: 3px solid $color-rosa;
-    border-radius: 15px;
+    border: 0.3rem solid $color-rosa;
+    border-radius: 1.5rem;
     cursor: pointer;
     animation-name: moverAbajo;
     animation-duration: 2s;
@@ -14,12 +14,12 @@
 
     &:hover{
         color: $color-rosa;
-        border: 3px solid $color-blanco;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 20px $color-rosaA;
+        border: 0.3rem solid $color-blanco;
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.5rem 2rem $color-rosaA;
     }
     &:active{
-        transform: translateY(-2px);
-        box-shadow: 0 5px 20px $color-rosa;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 0.5rem 2rem $color-rosa;
     }
 }
