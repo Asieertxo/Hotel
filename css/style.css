@@ -38,7 +38,7 @@ html {
     background-color: #00000066; }
   .header-titulocaja {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40.8rem;
