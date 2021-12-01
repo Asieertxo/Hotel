@@ -4,6 +4,9 @@
     height: 8rem;
     animation-name: moverAbajo;
     animation-duration: 2s;
+    @include respond(Tablet){
+        display: none;
+    }
 
     &-logo{
         height: 7rem;

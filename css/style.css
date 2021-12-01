@@ -21,6 +21,15 @@ body {
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 23.44em) {
+    html {
+      font-size: 40%; } }
 
 .header {
   height: 95vh;
@@ -255,6 +264,9 @@ html {
   height: 8rem;
   animation-name: moverAbajo;
   animation-duration: 2s; }
+  @media (max-width: 56.25em) {
+    .navegacion {
+      display: none; } }
   .navegacion-logo {
     height: 7rem;
     margin-top: 4rem;
