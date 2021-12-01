@@ -30,7 +30,7 @@
         height: 100%;
         width: 0;
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.3);;
+        background-color: $color-negroA2;
         z-index: 1000;
         opacity: 0;
         transition: all 0.8s;
@@ -121,12 +121,12 @@
     &__checkbox:checked+&__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
-        background-color: $color-negro;
+        background-color: $color-blanco;
     }
 
     &__checkbox:checked+&__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
-        background-color: $color-negro;
+        background-color: $color-blanco;
     }
 }

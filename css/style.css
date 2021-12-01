@@ -148,7 +148,7 @@ html {
   height: 100%;
   width: 0;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #0000004d;
   z-index: 1000;
   opacity: 0;
   transition: all 0.8s; }
@@ -222,12 +222,12 @@ html {
 .burger__checkbox:checked + .burger__button .burger__icon::before {
   top: 0;
   transform: rotate(135deg);
-  background-color: #000000; }
+  background-color: #fff; }
 
 .burger__checkbox:checked + .burger__button .burger__icon::after {
   top: 0;
   transform: rotate(-135deg);
-  background-color: #000000; }
+  background-color: #fff; }
 
 .oscurecer {
   width: 100%;
@@ -237,17 +237,17 @@ html {
 .navegacion:hover ~ .oscurecer {
   width: 100%;
   height: 95vh;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: #0000004d; }
 
 .header-titulocaja:hover ~ .oscurecer {
   width: 100%;
   height: 95vh;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: #0000004d; }
 
 .header-registro:hover ~ .oscurecer {
   width: 100%;
   height: 95vh;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: #0000004d; }
 
 .navegacion {
   position: absolute;
