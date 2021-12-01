@@ -11,4 +11,13 @@ body{
 }
 html{
     font-size: 62.5%;
+    @include respond(Tablet){
+        font-size: 60%;
+    }
+    @include respond(BigPhone){
+        font-size: 50%;
+    }
+    @include respond(SmallPhone){
+        font-size: 40%;
+    }
 }
