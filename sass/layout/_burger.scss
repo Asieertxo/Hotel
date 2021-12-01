@@ -23,7 +23,16 @@
         position: fixed;
         right: -25rem;
         background-color: $color-morado;
+        z-index: 1500;
+        transition: all 0.8s;
+    }
+    &__oscurecer {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.3);;
         z-index: 1000;
+        opacity: 0;
         transition: all 0.8s;
     }
 
@@ -32,7 +41,7 @@
         width: 25rem;
         position: fixed;
         right: -1000rem;
-        z-index: 1500;
+        z-index: 1700;
         width: 100%; //fix the problem
         transition: all 0.8s;
     }
@@ -64,6 +73,10 @@
         opacity: 1;
         width: 25rem;
         right: 0;
+    }
+    &__checkbox:checked~&__oscurecer {
+        width: 100%;
+        opacity: 1;
     }
 &__icon {
     position: relative;

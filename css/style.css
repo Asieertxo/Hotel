@@ -141,7 +141,16 @@ html {
   position: fixed;
   right: -25rem;
   background-color: #3b003b;
+  z-index: 1500;
+  transition: all 0.8s; }
+
+.burger__oscurecer {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  opacity: 0;
   transition: all 0.8s; }
 
 .burger__nav {
@@ -149,7 +158,7 @@ html {
   width: 25rem;
   position: fixed;
   right: -1000rem;
-  z-index: 1500;
+  z-index: 1700;
   width: 100%;
   transition: all 0.8s; }
 
@@ -178,6 +187,10 @@ html {
   opacity: 1;
   width: 25rem;
   right: 0; }
+
+.burger__checkbox:checked ~ .burger__oscurecer {
+  width: 100%;
+  opacity: 1; }
 
 .burger__icon {
   position: relative;
